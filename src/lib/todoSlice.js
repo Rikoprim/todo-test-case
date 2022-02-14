@@ -54,10 +54,10 @@ const todoSlice = createSlice({
     EditTodos(state, action) {
       const {id, title, description} = action.payload
 
-      const todoID = state.todos.find((item) => item.id === id)
+      const todoID = state.tempTodos.find((item) => item.id === id)
       todoID.title = title
       todoID.description = description
-      state.tempTodos = state.todos
+      state.todos = state.tempTodos
     },
 
     FilterTodos(state, action) {
