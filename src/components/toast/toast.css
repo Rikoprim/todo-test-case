@@ -1,0 +1,39 @@
+.containertoast {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    z-index: 500;
+}
+.bodytoast {
+    width: 350px;
+    margin: auto;
+    pointer-events: none;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+}
+.texttoast {
+    font-weight: 200;
+    font-size: 0.9em;
+    margin: 0px 0px 0px 10px;
+    color: #fff;
+}
+.d-flex {
+    display: flex;
+}
+.align-items-center {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.fade-in {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 300ms;
+}
+.fade-out {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 300ms, opacity 300ms;
+}
