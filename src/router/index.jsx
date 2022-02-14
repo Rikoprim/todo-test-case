@@ -5,13 +5,13 @@ import { AddTodo, EditTodo, ListTodo } from '../views';
 
 export const AuthContext = React.createContext();
 
-const Router = () => {
-  const defaultState = {
-    show: false,
-    variant: 'success',
-    message: ''
-  }
+const defaultState = {
+  show: false,
+  variant: 'success',
+  message: ''
+}
 
+const Router = () => {
   const [state, dispatch] = useReducer(
     (prevState, action) => {
       switch (action.type) {
@@ -22,6 +22,8 @@ const Router = () => {
             variant: action.variant,
             message: action.message,
           }
+        default:
+          return action;
       }
     },
     {
@@ -30,8 +32,6 @@ const Router = () => {
       message: '',
     }
   )
-
-
 
   const setToDefaultToast = () => {
     setTimeout(() => {
